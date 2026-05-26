@@ -1,0 +1,18 @@
+# Virtual environments
+.conda/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# VS Code settings
+.vscode/
+
+# Pretrained models
+models_pretrained/
+
+# Documentation
+docs/
+
+processed_data/*.npy
