@@ -19,7 +19,27 @@ Dự án này là hệ thống nhận diện trạng thái buồn ngủ của t�
 - `predict.py`: File chạy chính. Bật Webcam để nhận diện trực tiếp.
 - `test_single_image.py`: File kiểm tra trạng thái trên một bức ảnh tĩnh.
 - `train.py` & `preprocess.py`: Các script để xử lý dữ liệu và huấn luyện lại Model.
-- data : folder chứa dataset cho bài lấy từ -> MRL Infrared Eye Images Dataset for Drowsiness Detection (Forked Version)
+- `data/`: Chứa dataset ảnh mắt (train/val/test, awake/sleepy).
+
+## Dataset
+Dataset lấy từ **MRL Infrared Eye Images Dataset for Drowsiness Detection (Forked Version)**.
+- Tải file `data.zip` tại trang **Releases**: https://github.com/HongSon507/Drowsiness-Detection/releases/tag/v1.0-data
+
+Sau khi tải về, giải nén vào thư mục gốc:
+```
+unzip data.zip -d data/
+```
+Cấu trúc sau khi giải nén:
+```
+data/
+├── train/awake/
+├── train/sleepy/   
+├── val/awake/
+├── val/sleepy/
+├── test/awake/
+└── test/sleepy/
+```
+
 ## Hướng dẫn sử dụng
 
 ### 1. Cài đặt môi trường
@@ -41,10 +61,10 @@ Bạn có thể test trực tiếp bằng cách truyền đường dẫn ảnh v
 ```
 python test_single_image.py test_images/buonngu.jpg
 ```
-## Credits
+### 4. Credits
 - HongSon507 inspired from NITYMED Paper (2023)
 - Download free dataset from MRL Infrared Eye Images Dataset for Drowsiness Detection (Forked Version)
-## Các hướng có thể cải tiến 
+### 5. Các hướng có thể cải tiến 
 - Cải thiện logic cảnh báo thay vì từng frame 
 - Có thể thêm các đặc trưng bổ sung để tăng độ chính xác 
 (góc nghiêng đầu ,...)
